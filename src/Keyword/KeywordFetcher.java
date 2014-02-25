@@ -59,11 +59,10 @@ public class KeywordFetcher {
                 int index = keywords1.size() + 1;
                 
                 keywords1.put(index, itemRes1.toString());
-                
-                out.println(itemRes1.toString().replaceAll("(http://dbpedia.org/property/|http://opengraphprotocol.org/schema/|http://purl.org/dc/elements/1.1/|http://purl.org/dc/terms/|http://www.openlinksw.com/schemas/oplweb#|http://www.w3.org/1999/02/22-rdf-syntax-ns#|http://www.w3.org/2000/01/rdf-schema#|http://www.w3.org/2002/07/owl#|http://www.w3.org/2004/02/skos/core#|http://xmlns.com/foaf/0.1/|)", ""));
+                out.println(itemRes1.toString().replaceAll("(http://dbpedia.org/property/)", "")); 
+                //out.println(itemRes1.toString().replaceAll("(http://dbpedia.org/property/|http://opengraphprotocol.org/schema/|http://purl.org/dc/elements/1.1/|http://purl.org/dc/terms/|http://www.openlinksw.com/schemas/oplweb#|http://www.w3.org/1999/02/22-rdf-syntax-ns#|http://www.w3.org/2000/01/rdf-schema#|http://www.w3.org/2002/07/owl#|http://www.w3.org/2004/02/skos/core#|http://xmlns.com/foaf/0.1/)", ""));
 
                 System.out.println(index + ": " + itemRes1.toString());
-                //.replace("http://dbpedia.org/property/", "")
                 
             }
             
@@ -84,7 +83,8 @@ public class KeywordFetcher {
                 
                 keywords2.put(index2, itemRes2.toString());
                 
-                out.println(itemRes2.toString().replaceAll("(http://dbpedia.org/property/|http://opengraphprotocol.org/schema/|http://purl.org/dc/elements/1.1/|http://purl.org/dc/terms/|http://www.openlinksw.com/schemas/oplweb#|http://www.w3.org/1999/02/22-rdf-syntax-ns#|http://www.w3.org/2000/01/rdf-schema#|http://www.w3.org/2002/07/owl#|http://www.w3.org/2004/02/skos/core#|http://xmlns.com/foaf/0.1/|)", ""));
+                out.println(itemRes2.toString().replaceAll("(http://dbpedia.org/property/)", ""));
+                //out.println(itemRes2.toString().replaceAll("(http://dbpedia.org/property/|http://opengraphprotocol.org/schema/|http://purl.org/dc/elements/1.1/|http://purl.org/dc/terms/|http://www.openlinksw.com/schemas/oplweb#|http://www.w3.org/1999/02/22-rdf-syntax-ns#|http://www.w3.org/2000/01/rdf-schema#|http://www.w3.org/2002/07/owl#|http://www.w3.org/2004/02/skos/core#|http://xmlns.com/foaf/0.1/)", ""));
 
                 System.out.println(index2 + ": " + itemRes2.toString());
                 

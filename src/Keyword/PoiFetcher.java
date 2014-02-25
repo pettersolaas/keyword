@@ -31,7 +31,7 @@ public class PoiFetcher {
 		/*
 		 * To do:
 		 * 
-		 * - Set up git/svn - working on it - still working -third test - fourth, seems to bve working
+		 *
 		 * - see if owl properties can be used
 		 * - add direct property query to the current subject
 		 * - start work on android
