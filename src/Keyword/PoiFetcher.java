@@ -2,21 +2,12 @@ package Keyword;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
-
-import javax.management.Query;
-
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
-import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.query.ResultSetFormatter;
-import com.hp.hpl.jena.rdf.model.Literal;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.Resource;
 
 public class PoiFetcher {
 	
@@ -56,7 +47,7 @@ public class PoiFetcher {
 	
 	
     Scanner currentPropertyListScanner = new Scanner(new File("C:/Users/petter/workspace/Keyword/src/Keyword/current_properties.txt"));
-    ArrayList<String> currentPropertyList = new ArrayList<String>();
+    //ArrayList<String> currentPropertyList = new ArrayList<String>();
     String currentKeywords = "";
     Double searchRadius = 5.0;
     Double latitude = 60.3964;

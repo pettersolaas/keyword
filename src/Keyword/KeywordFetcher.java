@@ -1,9 +1,7 @@
 package Keyword;
 
 import com.hp.hpl.jena.query.*;
-import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Resource;
-
 import java.io.*;
 import java.util.HashMap;
 

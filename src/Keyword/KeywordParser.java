@@ -3,9 +3,6 @@ package Keyword;
 import java.io.*;
 import java.util.*;
 
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.sparql.pfunction.library.str;
 
 
 class KeywordParser {
@@ -195,7 +192,9 @@ class KeywordParser {
     	
     	System.out.println("\n\n\n\nThe following are all the properties/keywords that are not on the stopword list:");
     	
-    	int propertySetCounter = 1;
+
+		@SuppressWarnings("unused")
+		int propertySetCounter = 1;
     	
     	for (String property : propertySet) { 
     		//System.out.println(propertySetCounter + ": " + property);
