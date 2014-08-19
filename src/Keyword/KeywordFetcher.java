@@ -1,4 +1,7 @@
+//Fetches all keywords in DBpedia in two separate queries
+
 package Keyword;
+
 
 import com.hp.hpl.jena.query.*;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -42,8 +45,10 @@ public class KeywordFetcher {
     			"offset 40000 " +
     			"LIMIT 40000";
         
-
-            
+        
+        //Fetching OWL properties use: owl:DatatypeProperty instead of rdf:Property
+        
+        
             QueryExecution qe1 = QueryExecutionFactory.sparqlService(SERVICE, queryText);
             ResultSet results1 = qe1.execSelect();
 
@@ -65,8 +70,7 @@ public class KeywordFetcher {
             }
             
             
-            
-            
+
             QueryExecution qe2 = QueryExecutionFactory.sparqlService(SERVICE, queryText2);
             ResultSet results2 = qe2.execSelect();
 

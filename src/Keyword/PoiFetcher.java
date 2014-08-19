@@ -1,3 +1,5 @@
+// Queries DBpedia for POIs with matching keywords within a given radius
+
 package Keyword;
 
 import java.io.File;
@@ -14,42 +16,19 @@ public class PoiFetcher {
 	final static String SERVICE = "http://dbpedia.org/sparql";
 	
 	public static void main(String[] args) throws FileNotFoundException {
-	
-		
-		
-		
-		
+
 		/*
 		 * To do:
 		 * 
-		 *
 		 * - see if owl properties can be used
 		 * - add direct property query to the current subject
 		 * - start work on android
-		 * 
-		 * 
-		 * 
 		 */
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-	
+
     Scanner currentPropertyListScanner = new Scanner(new File("C:/Users/petter/workspace/Keyword/src/Keyword/current_properties.txt"));
     //ArrayList<String> currentPropertyList = new ArrayList<String>();
     String currentKeywords = "";
-    Double searchRadius = 5.0;
+    Double searchRadius = 15.0;
     Double latitude = 60.3964;
     Double longitude = 5.32842;
     	
@@ -102,6 +81,8 @@ public class PoiFetcher {
     
     
     System.out.println(queryText);
+    
+    // Testline
     
     
     

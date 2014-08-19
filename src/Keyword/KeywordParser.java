@@ -1,3 +1,5 @@
+// Sorts keywords from POI abstract, based on comparison with stopword list and keywords from DBpedia 
+
 package Keyword;
 
 import java.io.*;
@@ -45,8 +47,8 @@ class KeywordParser {
     	*/
     	
     	
-    	
-	    Scanner abstractWordListScanner = new Scanner(new File("C:/Users/petter/workspace/Keyword/src/Keyword/abstract_floibanen.txt"));
+    	// Read abstract file and put words into array
+	    Scanner abstractWordListScanner = new Scanner(new File("C:/Users/petter/workspace/Keyword/src/Keyword/abstract_bryggen.txt"));
 	    ArrayList<String> abstractWordList = new ArrayList<String>();
 	    	
 	    while (abstractWordListScanner.hasNext()){
@@ -75,7 +77,7 @@ class KeywordParser {
     	
     	
     	
-    	
+    	// Read stopword list file and put stopwords into array
 	    Scanner stopWordListScanner = new Scanner(new File("C:/Users/petter/workspace/Keyword/src/Keyword/default_english_stopwords.txt"));
 	    ArrayList<String> stopwordList = new ArrayList<String>();
 	    	
@@ -100,7 +102,7 @@ class KeywordParser {
     	}
     	*/
     	
-    	
+    	// Find words from abstract that match existing properties from DBPedia but are not on stopword list 
     	Set<String> propertySet = new HashSet<String>();
     	Set<String> invalidPropertySet = new HashSet<String>();
     	
@@ -142,6 +144,7 @@ class KeywordParser {
         }
         
         
+        // Create file and print the chosen properties
     	PrintWriter out = new PrintWriter("C:/Users/petter/workspace/Keyword/src/Keyword/current_properties.txt");
 
     	for (String property : propertySet) { 
